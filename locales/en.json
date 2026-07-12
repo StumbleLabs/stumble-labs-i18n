@@ -216,7 +216,7 @@
     "startTyping": "Start typing to search for players",
     "modalIntro": "Enter a player's exact username to add them to the tracker.",
     "username": "Username",
-    "usernamePlaceholder": "e.g. StumbleGuy123",
+    "usernamePlaceholder": "e.g. Dasw",
     "errors": { "playerNotFound": "Player not found" }
   },
   "hof": {
