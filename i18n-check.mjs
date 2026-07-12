@@ -5,9 +5,13 @@
  *   1. same set of keys as en.json (no missing, no unknown)
  *   2. same interpolation placeholders per string ({{name}} tokens)
  *
+ * Optional guard: --block=pt-BR,xx marks locales that are maintained upstream
+ * (by the website team) and must not be submitted in this repo. If one is
+ * present the check fails with a clear message.
+ *
  * Works in both repos:
- *   - stumble-labs-i18n: run where ./locales exists, or `node i18n-check.mjs locales`
- *   - tracker: `node scripts/i18n-check.mjs` (defaults to src/assets/i18n)
+ *   - stumble-labs-i18n: `node i18n-check.mjs locales --block=pt-BR`
+ *   - tracker: `node scripts/i18n-check.mjs` (defaults to src/assets/i18n, no block)
  *
  * Exit code 0 = all good, 1 = problems found, 2 = setup error.
  */
@@ -16,12 +20,18 @@ import { join } from 'node:path';
 
 const REFERENCE = 'en.json';
 
-function resolveDir() {
-  const arg = process.argv[2];
-  if (arg) return arg;
-  if (existsSync('locales')) return 'locales';
-  return join('src', 'assets', 'i18n');
-}
+const args = process.argv.slice(2);
+const dirArg = args.find((a) => !a.startsWith('--'));
+const blockArg = args.find((a) => a.startsWith('--block='));
+
+const dir = dirArg || (existsSync('locales') ? 'locales' : join('src', 'assets', 'i18n'));
+const blocked = new Set(
+  (blockArg ? blockArg.slice('--block='.length) : '')
+    .split(',')
+    .map((s) => s.trim())
+    .filter(Boolean)
+    .map((s) => (s.endsWith('.json') ? s : `${s}.json`))
+);
 
 function flatten(obj, prefix = '', out = {}) {
   for (const [k, v] of Object.entries(obj)) {
@@ -44,35 +54,44 @@ function sameSet(a, b) {
   return a.size === b.size && [...a].every((x) => b.has(x));
 }
 
-function load(dir, file) {
+function load(file) {
   return JSON.parse(readFileSync(join(dir, file), 'utf8'));
 }
 
-const dir = resolveDir();
 if (!existsSync(join(dir, REFERENCE))) {
   console.error(`Could not find ${REFERENCE} in "${dir}".`);
   process.exit(2);
 }
 
-const ref = flatten(load(dir, REFERENCE));
+const ref = flatten(load(REFERENCE));
 const refKeys = new Set(Object.keys(ref));
 
-const files = readdirSync(dir)
+const present = readdirSync(dir)
   .filter((f) => f.endsWith('.json') && f !== REFERENCE)
   .sort();
+const blockedPresent = present.filter((f) => blocked.has(f));
+const files = present.filter((f) => !blocked.has(f));
 
 console.log(`Reference: ${REFERENCE} (${refKeys.size} keys)`);
 console.log('');
 
-if (!files.length) {
+let problems = 0;
+
+for (const f of blockedPresent) {
+  problems++;
+  console.log(`  fail  ${f}`);
+  console.log(`        ${f} is maintained by the website team and is not translated here.`);
+  console.log('        Please remove it from this pull request and open an issue instead.');
+  console.log('');
+}
+
+if (!files.length && !blockedPresent.length) {
   console.log('No translation files yet besides the reference.');
   process.exit(0);
 }
 
-let problems = 0;
-
 for (const file of files) {
-  const flat = flatten(load(dir, file));
+  const flat = flatten(load(file));
   const keys = new Set(Object.keys(flat));
 
   const missing = [...refKeys].filter((k) => !keys.has(k));

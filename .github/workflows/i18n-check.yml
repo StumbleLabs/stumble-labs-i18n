@@ -17,4 +17,4 @@ jobs:
         with:
           node-version: 20
       - name: Validate translations against en.json
-        run: node i18n-check.mjs locales
+        run: node i18n-check.mjs locales --block=pt-BR

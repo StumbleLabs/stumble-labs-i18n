@@ -100,8 +100,10 @@ runtime. Move them, do not remove them.
 "rpToGo": "Faltan algunos RP"
 ```
 
-**3. Do not edit `locales/en.json`.** English is generated from the website. If a
-source string reads badly, note it in your PR instead of editing it here.
+**3. `en.json` and `pt-BR.json` are managed by the website team.** English is
+generated from the site, and Brazilian Portuguese is maintained upstream, so the
+check rejects any PR that adds or edits them. If a source string reads badly,
+open an issue instead.
 
 ## Validate locally (optional)
 
