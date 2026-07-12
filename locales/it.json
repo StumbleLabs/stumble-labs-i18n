@@ -151,7 +151,7 @@
     "addPlayer": "AGGIUNGI GIOCATORE",
     "adding": "AGGIUNTA IN CORSO...",
     "idPrefix": "ID {{id}}",
-    "rankedLeaderboard": "CLASSIFICA CLASSIFICATA",
+    "rankedLeaderboard": "CLASSIFICATA",
     "browseSkins": "SFOGLIA SKIN",
     "stats": {
       "accountsTracked": "Account tracciati",
@@ -246,7 +246,7 @@
     }
   },
   "lb": {
-    "rankedHeader": "Classifica Classificata",
+    "rankedHeader": "Classificata",
     "rankedDescription": "Qui trovi approfondimenti sulla classifica, come la distribuzione dei giocatori tra i diversi gradi, regioni e piattaforme, oltre alla classifica attuale.",
     "playerDistribution": "Distribuzione dei giocatori",
     "playerDistributionDescription": "Come sono distribuiti i giocatori della classifica — per Paese, per regione server del Club o per la piattaforma su cui giocano. Clicca un Paese per filtrare la classifica (clicca di nuovo per cancellare).",
