@@ -1,0 +1,10 @@
+{
+  "name": "stumble-labs-i18n",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Community translations for the Stumble Labs website",
+  "scripts": {
+    "check": "node i18n-check.mjs locales"
+  }
+}
