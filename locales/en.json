@@ -817,7 +817,7 @@
     "syncResolvedText": "The internal sync error that caused unusual point jumps (e.g. +1k, +5k, +10k) for some Ranked players this season and the previous one was fixed on August 8, 2026, 4:34 AM UTC. Still seeing something wrong? Let us know on our",
     "syncResolvedDiscord": "Stumble Labs Discord",
     "noRankedData": "No ranked data available",
-    "noRankedHistory": "This user doesn't have ranked history data.",
+    "noRankedHistory": "Ranked history is only tracked for players who reached the top 1000 of Stumble Guys ranked at some point. This player hasn't shown up there yet.",
     "current": "Current",
     "currentScore": "Current Score",
     "active": "Active",
