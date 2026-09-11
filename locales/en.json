@@ -600,6 +600,7 @@
       "similarItems": "Similar Items",
       "loading3d": "Loading 3D Model...",
       "skinColor": "Skin color",
+      "model3d": "3D Model",
       "downloadIcon": "Download icon",
       "downloadModel": "Download 3D model",
       "cameraInfo": "Camera Info",
