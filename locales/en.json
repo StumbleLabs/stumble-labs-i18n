@@ -599,6 +599,9 @@
       "cost": "Cost",
       "similarItems": "Similar Items",
       "loading3d": "Loading 3D Model...",
+      "skinColor": "Skin color",
+      "downloadIcon": "Download icon",
+      "downloadModel": "Download 3D model",
       "cameraInfo": "Camera Info",
       "positionLabel": "Position:",
       "zoomLabel": "Zoom:",
@@ -624,10 +627,10 @@
       "loadError": "An error occurred while loading the asset information",
       "modelFailed": "Failed to load 3D model: {{detail}}",
       "unknownError": "Unknown error",
-      "fbxUrlMissing": "FBX URL not provided",
-      "fbxNotAccessible": "FBX file not accessible: {{status}} {{statusText}}",
-      "fbxCannotAccess": "Cannot access FBX file: {{detail}}",
-      "viewerNotFound": "FBX viewer container not found. Please ensure the 3D viewer modal is visible."
+      "fbxUrlMissing": "3D URL not provided",
+      "fbxNotAccessible": "3D file not accessible: {{status}} {{statusText}}",
+      "fbxCannotAccess": "Cannot access 3D file: {{detail}}",
+      "viewerNotFound": "3D viewer container not found. Please ensure the 3D viewer modal is visible."
     }
   },
   "profile": {
