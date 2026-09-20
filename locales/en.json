@@ -686,6 +686,22 @@
       "noMapsTracked": "No maps tracked yet",
       "mapsMeta": "Custom maps seen by the StumbleLabs custom UGC maps tracker service."
     },
+    "statsHistory": {
+      "title": "Progress History",
+      "metrics": {
+        "trophies": "Trophies",
+        "crowns": "Crowns",
+        "experience": "XP"
+      },
+      "first": "First snapshot",
+      "latest": "Latest snapshot",
+      "change": "Change",
+      "range": "{{count}} snapshots from {{from}} to {{to}}",
+      "loading": "Loading progress history...",
+      "error": "Failed to load progress history",
+      "empty": "Not enough snapshots yet. Check back after this player has been seen on a few more days.",
+      "caption": "Each point is a day this player was seen by Stumble Labs. It is not a continuous daily track, so gaps are expected."
+    },
     "inventoryHeader": "Inventory",
     "clan": "Clan",
     "performanceSummary": "Performance Summary",
