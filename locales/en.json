@@ -693,14 +693,22 @@
         "crowns": "Crowns",
         "experience": "XP"
       },
-      "first": "First snapshot",
-      "latest": "Latest snapshot",
-      "change": "Change",
-      "range": "{{count}} snapshots from {{from}} to {{to}}",
+      "ranges": {
+        "7d": "7d",
+        "30d": "30d",
+        "90d": "90d",
+        "all": "All"
+      },
+      "gain": "Gain in period",
+      "avgPerDay": "Avg. per day seen",
+      "bestDay": "Best day",
+      "daysSeen": "Seen on {{seen}} of {{days}} days",
+      "dailyGain": "Daily gain",
+      "total": "{{metric}} total",
       "loading": "Loading progress history...",
       "error": "Failed to load progress history",
       "empty": "Not enough snapshots yet. Check back after this player has been seen on a few more days.",
-      "caption": "Each point is a day this player was seen by Stumble Labs. It is not a continuous daily track, so gaps are expected."
+      "caption": "Each bar is the change since the previous snapshot, shown on the day the player was seen by Stumble Labs. Days without a bar are days the player was not seen, so a bar after a gap covers the whole gap."
     },
     "inventoryHeader": "Inventory",
     "clan": "Clan",
