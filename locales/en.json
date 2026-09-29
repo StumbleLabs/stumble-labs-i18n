@@ -666,6 +666,7 @@
       "classicTournaments": "Classic Tournaments",
       "inventory": "Inventory",
       "usernameHistory": "Username History",
+      "titles": "Titles",
       "ugcMaps": "Maps (UGC)",
       "deprecated": "Deprecated"
     },
@@ -685,6 +686,24 @@
       "mapsTracked": "Created maps tracked",
       "noMapsTracked": "No maps tracked yet",
       "mapsMeta": "Custom maps seen by the StumbleLabs custom UGC maps tracker service."
+    },
+    "titles": {
+      "header": "Title History",
+      "description": "Titles this player has used",
+      "notice": "We only record a title when the profile is viewed on Stumble Labs. Titles used between visits may be missing, and time in use is an estimate based on those visits.",
+      "current": "CURRENT",
+      "seenAt": "seen on {{date}}",
+      "currentFor": "equipped for {{duration}}",
+      "usedFor": "used for {{duration}}",
+      "days": "~{{days}} days",
+      "oneDay": "~1 day",
+      "lessThanDay": "less than a day",
+      "estimated": "estimated",
+      "estimatedTooltip": "Calculated from the dates the profile was viewed on Stumble Labs",
+      "emptyTitle": "No titles recorded yet",
+      "emptyHint": "The next title will show up here the next time this profile is opened.",
+      "loading": "Loading title history...",
+      "error": "Failed to load title history"
     },
     "statsHistory": {
       "title": "Progress History",
