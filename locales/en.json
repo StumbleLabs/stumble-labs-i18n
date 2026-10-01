@@ -645,6 +645,7 @@
     "somethingWentWrong": "Something went wrong",
     "loadErrorText": "We couldn't load this profile right now. This is usually temporary — give it another try in a moment.",
     "outdatedData": "This profile data may be outdated.",
+    "archived": "This account is no longer available on Stumble Guys. It may have been archived, banned, or deleted. The data shown is the last we recorded.",
     "defaultAvatarAlt": "Default Avatar",
     "viewUsernameHistory": "View username history",
     "copyUsername": "Copy username",
