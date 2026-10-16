@@ -700,6 +700,10 @@
       "noMapsTracked": "No maps tracked yet",
       "mapsMeta": "Custom maps seen by the StumbleLabs custom UGC maps tracker service."
     },
+    "rankedHistory": {
+      "loading": "Loading ranked history...",
+      "error": "Failed to load ranked history"
+    },
     "titles": {
       "header": "Title History",
       "description": "Titles this player has used",
